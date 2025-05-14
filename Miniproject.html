@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Harmony</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #88d3ce, #6e45e2);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #6e45e2;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #6e45e2;
+      margin-bottom: 20px;
+    }
+
+    .benefits ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      background-color: #e6e6ff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      background-color: #f3f3f3;
+      border-left: 3px solid #6e45e2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #6e45e2;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      iframe {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🧘 Yoga Harmony</h1>
+    <p>Balance your body, mind, and soul through Yoga</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#practice">Practice</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section id="home" class="image-section">
+    <h2>Welcome to Yoga Harmony</h2>
+    <p>Discover the ancient practice of yoga to achieve harmony, flexibility, and inner peace. Whether you're a beginner or experienced yogi, our platform guides you to stay consistent and motivated.</p>
+    <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" alt="Yoga Pose" />
+  </section>
+
+  <section id="benefits" class="benefits">
+    <h2>Benefits of Yoga</h2>
+    <ul>
+      <li>Improves flexibility and strength</li>
+      <li>Reduces stress and anxiety</li>
+      <li>Enhances mental focus and clarity</li>
+      <li>Boosts immunity and energy levels</li>
+      <li>Promotes better posture and breathing</li>
+    </ul>
+  </section>
+
+  <section id="practice">
+    <h2>Yoga Practice Video</h2>
+    <p>Follow along with this 10-minute daily yoga session to refresh your body and mind.</p>
+    <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">👉 What is the best time to do yoga?</div>
+      <div class="faq-answer">Morning is ideal for yoga to energize your body for the day, but any time that fits your schedule works well.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">👉 Can beginners do yoga?</div>
+      <div class="faq-answer">Absolutely! Start with basic poses and short sessions. Gradually increase duration and complexity.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">👉 Do I need special equipment?</div>
+      <div class="faq-answer">All you need is a comfortable yoga mat. Optional: blocks, straps, or a towel for support.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yoga Harmony. Stay balanced 🧘</p>
+  </footer>
+
+  <script>
+    // Toggle FAQ answers
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
